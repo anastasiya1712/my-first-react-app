@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Recipe from "./components/Recipe";
+import Welcome from "./components/Welcome";
+import { ShoppingCart } from "./components/ShoppingCart";
+import { Card } from "./components/Card";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -28,8 +32,13 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Recipe name="Сырные палочки" />
+      <Welcome userName="Anastasiya" welcomeText="You are welcome))" />
+      <ShoppingCart />
+      <Card title="Hello" body="body hello" />
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
